@@ -185,7 +185,8 @@
                 for (const dir of projectDirs) {
                     const projectName = dir.name;
                     const items = await fetchJson(apiUrl(`${CONFIG.projectsDir}/${projectName}`));
-                    const pdfs = items.filter(isPdf);
+                    // const pdfs = items.filter(isPdf);
+                    const pdfs = items
                     results.push({ projectName, pdfs });
                 }
 
